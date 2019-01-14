@@ -19,6 +19,10 @@
 		676FCECC21EC91FB0056D71F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FCECB21EC91FB0056D71F /* String.swift */; };
 		676FCECD21EC921D0056D71F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 676FCECF21EC921D0056D71F /* Localizable.strings */; };
 		676FCED521ECADD60056D71F /* Parseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FCED421ECADD60056D71F /* Parseable.swift */; };
+		676FCED821ECB1630056D71F /* UserCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FCED721ECB1630056D71F /* UserCellViewController.swift */; };
+		676FCEDB21ECB2EB0056D71F /* ViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FCEDA21ECB2EB0056D71F /* ViewControllerPresenter.swift */; };
+		676FCEDD21ECB3920056D71F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FCEDC21ECB3920056D71F /* BaseViewController.swift */; };
+		676FCEDF21ECB3E70056D71F /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FCEDE21ECB3E70056D71F /* BasePresenter.swift */; };
 		F2858BEF82E9FD2A51E25F4B /* Pods_HASTEN_SPORTS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFB8B8EA30A6942E8C07B78 /* Pods_HASTEN_SPORTS.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +45,10 @@
 		676FCED121EC926E0056D71F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		676FCED221EC926E0056D71F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		676FCED421ECADD60056D71F /* Parseable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parseable.swift; sourceTree = "<group>"; };
+		676FCED721ECB1630056D71F /* UserCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewController.swift; sourceTree = "<group>"; };
+		676FCEDA21ECB2EB0056D71F /* ViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPresenter.swift; sourceTree = "<group>"; };
+		676FCEDC21ECB3920056D71F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		676FCEDE21ECB3E70056D71F /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		785714FB199FEAFE72637B22 /* Pods-HASTEN SPORTS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HASTEN SPORTS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HASTEN SPORTS/Pods-HASTEN SPORTS.release.xcconfig"; sourceTree = "<group>"; };
 		EDFB8B8EA30A6942E8C07B78 /* Pods_HASTEN_SPORTS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HASTEN_SPORTS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,13 +86,14 @@
 		676FCEAA21EC8B270056D71F /* HASTEN SPORTS */ = {
 			isa = PBXGroup;
 			children = (
+				676FCED921ECB2D20056D71F /* Presenter */,
+				676FCED621ECAFE60056D71F /* Views */,
 				676FCED321ECADC70056D71F /* Protocol */,
 				676FCECA21EC91D80056D71F /* Extensions */,
 				676FCEC721EC910A0056D71F /* Resources */,
 				676FCEC021EC8F5D0056D71F /* Network */,
 				676FCEBD21EC8F3E0056D71F /* Model */,
 				676FCEAB21EC8B270056D71F /* AppDelegate.swift */,
-				676FCEAD21EC8B270056D71F /* ViewController.swift */,
 				676FCEAF21EC8B270056D71F /* Main.storyboard */,
 				676FCEB421EC8B270056D71F /* LaunchScreen.storyboard */,
 				676FCEB721EC8B270056D71F /* Info.plist */,
@@ -133,6 +142,25 @@
 				676FCED421ECADD60056D71F /* Parseable.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		676FCED621ECAFE60056D71F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				676FCEAD21EC8B270056D71F /* ViewController.swift */,
+				676FCED721ECB1630056D71F /* UserCellViewController.swift */,
+				676FCEDC21ECB3920056D71F /* BaseViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		676FCED921ECB2D20056D71F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				676FCEDA21ECB2EB0056D71F /* ViewControllerPresenter.swift */,
+				676FCEDE21ECB3E70056D71F /* BasePresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		B1C1471309BDADC6188B6767 /* Pods */ = {
@@ -290,9 +318,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				676FCEC421EC90900056D71F /* NetworkService.swift in Sources */,
+				676FCEDF21ECB3E70056D71F /* BasePresenter.swift in Sources */,
 				676FCED521ECADD60056D71F /* Parseable.swift in Sources */,
+				676FCEDD21ECB3920056D71F /* BaseViewController.swift in Sources */,
 				676FCEAE21EC8B270056D71F /* ViewController.swift in Sources */,
+				676FCEDB21ECB2EB0056D71F /* ViewControllerPresenter.swift in Sources */,
 				676FCEAC21EC8B270056D71F /* AppDelegate.swift in Sources */,
+				676FCED821ECB1630056D71F /* UserCellViewController.swift in Sources */,
 				676FCEBF21EC8F540056D71F /* UserJson.swift in Sources */,
 				676FCECC21EC91FB0056D71F /* String.swift in Sources */,
 				676FCEC621EC90E20056D71F /* hastenSportsError.swift in Sources */,

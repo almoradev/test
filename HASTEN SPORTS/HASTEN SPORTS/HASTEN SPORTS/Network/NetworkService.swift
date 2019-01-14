@@ -36,7 +36,7 @@ struct NetworkService {
 
 extension NetworkService {
     
-    func fetchUsers(_ success: @escaping (_ speakers: [UserJson]) -> Void, failure:  @escaping ResponseError) {
+    func fetchUsers(_ success: @escaping (_ users: [UserJson]) -> Void, failure:  @escaping ResponseError) {
         provider.request(.checkUsers) { result in
             switch result {
             case let .success(response):
