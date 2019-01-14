@@ -12,6 +12,13 @@
 		676FCEB121EC8B270056D71F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 676FCEAF21EC8B270056D71F /* Main.storyboard */; };
 		676FCEB321EC8B270056D71F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 676FCEB221EC8B270056D71F /* Assets.xcassets */; };
 		676FCEB621EC8B270056D71F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 676FCEB421EC8B270056D71F /* LaunchScreen.storyboard */; };
+		676FCEBF21EC8F540056D71F /* UserJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FCEBE21EC8F540056D71F /* UserJson.swift */; };
+		676FCEC221EC8F9D0056D71F /* hastenSport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FCEC121EC8F9D0056D71F /* hastenSport.swift */; };
+		676FCEC421EC90900056D71F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FCEC321EC90900056D71F /* NetworkService.swift */; };
+		676FCEC621EC90E20056D71F /* hastenSportsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FCEC521EC90E20056D71F /* hastenSportsError.swift */; };
+		676FCECC21EC91FB0056D71F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FCECB21EC91FB0056D71F /* String.swift */; };
+		676FCECD21EC921D0056D71F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 676FCECF21EC921D0056D71F /* Localizable.strings */; };
+		676FCED521ECADD60056D71F /* Parseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FCED421ECADD60056D71F /* Parseable.swift */; };
 		F2858BEF82E9FD2A51E25F4B /* Pods_HASTEN_SPORTS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFB8B8EA30A6942E8C07B78 /* Pods_HASTEN_SPORTS.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +31,16 @@
 		676FCEB221EC8B270056D71F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		676FCEB521EC8B270056D71F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		676FCEB721EC8B270056D71F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		676FCEBE21EC8F540056D71F /* UserJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJson.swift; sourceTree = "<group>"; };
+		676FCEC121EC8F9D0056D71F /* hastenSport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hastenSport.swift; sourceTree = "<group>"; };
+		676FCEC321EC90900056D71F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		676FCEC521EC90E20056D71F /* hastenSportsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hastenSportsError.swift; sourceTree = "<group>"; };
+		676FCECB21EC91FB0056D71F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		676FCECE21EC921D0056D71F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		676FCED021EC926E0056D71F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		676FCED121EC926E0056D71F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		676FCED221EC926E0056D71F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		676FCED421ECADD60056D71F /* Parseable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parseable.swift; sourceTree = "<group>"; };
 		785714FB199FEAFE72637B22 /* Pods-HASTEN SPORTS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HASTEN SPORTS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HASTEN SPORTS/Pods-HASTEN SPORTS.release.xcconfig"; sourceTree = "<group>"; };
 		EDFB8B8EA30A6942E8C07B78 /* Pods_HASTEN_SPORTS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HASTEN_SPORTS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -61,14 +78,61 @@
 		676FCEAA21EC8B270056D71F /* HASTEN SPORTS */ = {
 			isa = PBXGroup;
 			children = (
+				676FCED321ECADC70056D71F /* Protocol */,
+				676FCECA21EC91D80056D71F /* Extensions */,
+				676FCEC721EC910A0056D71F /* Resources */,
+				676FCEC021EC8F5D0056D71F /* Network */,
+				676FCEBD21EC8F3E0056D71F /* Model */,
 				676FCEAB21EC8B270056D71F /* AppDelegate.swift */,
 				676FCEAD21EC8B270056D71F /* ViewController.swift */,
 				676FCEAF21EC8B270056D71F /* Main.storyboard */,
-				676FCEB221EC8B270056D71F /* Assets.xcassets */,
 				676FCEB421EC8B270056D71F /* LaunchScreen.storyboard */,
 				676FCEB721EC8B270056D71F /* Info.plist */,
 			);
 			path = "HASTEN SPORTS";
+			sourceTree = "<group>";
+		};
+		676FCEBD21EC8F3E0056D71F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				676FCEBE21EC8F540056D71F /* UserJson.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		676FCEC021EC8F5D0056D71F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				676FCEC521EC90E20056D71F /* hastenSportsError.swift */,
+				676FCEC121EC8F9D0056D71F /* hastenSport.swift */,
+				676FCEC321EC90900056D71F /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		676FCEC721EC910A0056D71F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				676FCEB221EC8B270056D71F /* Assets.xcassets */,
+				676FCECF21EC921D0056D71F /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		676FCECA21EC91D80056D71F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				676FCECB21EC91FB0056D71F /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		676FCED321ECADC70056D71F /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				676FCED421ECADD60056D71F /* Parseable.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		B1C1471309BDADC6188B6767 /* Pods */ = {
@@ -134,6 +198,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 676FCE9F21EC8B270056D71F;
 			productRefGroup = 676FCEA921EC8B270056D71F /* Products */;
@@ -151,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				676FCEB621EC8B270056D71F /* LaunchScreen.storyboard in Resources */,
+				676FCECD21EC921D0056D71F /* Localizable.strings in Resources */,
 				676FCEB321EC8B270056D71F /* Assets.xcassets in Resources */,
 				676FCEB121EC8B270056D71F /* Main.storyboard in Resources */,
 			);
@@ -223,8 +289,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				676FCEC421EC90900056D71F /* NetworkService.swift in Sources */,
+				676FCED521ECADD60056D71F /* Parseable.swift in Sources */,
 				676FCEAE21EC8B270056D71F /* ViewController.swift in Sources */,
 				676FCEAC21EC8B270056D71F /* AppDelegate.swift in Sources */,
+				676FCEBF21EC8F540056D71F /* UserJson.swift in Sources */,
+				676FCECC21EC91FB0056D71F /* String.swift in Sources */,
+				676FCEC621EC90E20056D71F /* hastenSportsError.swift in Sources */,
+				676FCEC221EC8F9D0056D71F /* hastenSport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +307,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				676FCEB021EC8B270056D71F /* Base */,
+				676FCED021EC926E0056D71F /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -243,8 +316,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				676FCEB521EC8B270056D71F /* Base */,
+				676FCED121EC926E0056D71F /* es */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		676FCECF21EC921D0056D71F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				676FCECE21EC921D0056D71F /* en */,
+				676FCED221EC926E0056D71F /* es */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -254,6 +337,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -311,6 +395,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

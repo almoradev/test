@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  HASTEN SPORTS
+
+  Created by Ramón Ramírez Carreras on 14/1/19.
+  Copyright © 2019 Ramón Ramírez Carreras. All rights reserved.
+*/
+
+"app_name" = "HASTEN SPORTS";
+"error" = "Error en la conexión con el servidor";
+"errorUser" = "No se ha podido descargar los usuarios";
