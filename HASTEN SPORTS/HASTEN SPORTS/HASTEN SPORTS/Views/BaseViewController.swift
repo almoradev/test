@@ -6,9 +6,12 @@
 //  Copyright © 2019 Ramón Ramírez Carreras. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import SVProgressHUD
 
 protocol BaseViewProtocol: class {
+    func showLoading()
+    func hideLoading()
     func showMessage(_ message: String, title: String?, alternativeAction: UIAlertAction?, acceptAction: UIAlertAction)
 }
 
@@ -35,6 +38,23 @@ extension UIViewController: BaseViewProtocol {
         
         DispatchQueue.main.async {
             UIApplication.topViewController()?.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func showLoading() {
+        DispatchQueue.main.async {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+            SVProgressHUD.setFadeInAnimationDuration(0.0)
+            SVProgressHUD.setFadeOutAnimationDuration(0.0)
+            SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.clear)
+            SVProgressHUD.show()
+        }
+    }
+    
+    func hideLoading() {
+        DispatchQueue.main.async {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            SVProgressHUD.dismiss()
         }
     }
 }

@@ -23,6 +23,8 @@
 		676FCEDB21ECB2EB0056D71F /* ViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FCEDA21ECB2EB0056D71F /* ViewControllerPresenter.swift */; };
 		676FCEDD21ECB3920056D71F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FCEDC21ECB3920056D71F /* BaseViewController.swift */; };
 		676FCEDF21ECB3E70056D71F /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FCEDE21ECB3E70056D71F /* BasePresenter.swift */; };
+		676FCEE121ECB7330056D71F /* SportJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FCEE021ECB7330056D71F /* SportJson.swift */; };
+		676FCEE321ECBC170056D71F /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FCEE221ECBC170056D71F /* UIApplication.swift */; };
 		F2858BEF82E9FD2A51E25F4B /* Pods_HASTEN_SPORTS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFB8B8EA30A6942E8C07B78 /* Pods_HASTEN_SPORTS.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 		676FCEDA21ECB2EB0056D71F /* ViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPresenter.swift; sourceTree = "<group>"; };
 		676FCEDC21ECB3920056D71F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		676FCEDE21ECB3E70056D71F /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		676FCEE021ECB7330056D71F /* SportJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportJson.swift; sourceTree = "<group>"; };
+		676FCEE221ECBC170056D71F /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		785714FB199FEAFE72637B22 /* Pods-HASTEN SPORTS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HASTEN SPORTS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HASTEN SPORTS/Pods-HASTEN SPORTS.release.xcconfig"; sourceTree = "<group>"; };
 		EDFB8B8EA30A6942E8C07B78 /* Pods_HASTEN_SPORTS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HASTEN_SPORTS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -105,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				676FCEBE21EC8F540056D71F /* UserJson.swift */,
+				676FCEE021ECB7330056D71F /* SportJson.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				676FCECB21EC91FB0056D71F /* String.swift */,
+				676FCEE221ECBC170056D71F /* UIApplication.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -261,15 +267,19 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HASTEN SPORTS/Pods-HASTEN SPORTS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				676FCEE121ECB7330056D71F /* SportJson.swift in Sources */,
 				676FCEC421EC90900056D71F /* NetworkService.swift in Sources */,
 				676FCEDF21ECB3E70056D71F /* BasePresenter.swift in Sources */,
 				676FCED521ECADD60056D71F /* Parseable.swift in Sources */,
@@ -324,6 +335,7 @@
 				676FCEAE21EC8B270056D71F /* ViewController.swift in Sources */,
 				676FCEDB21ECB2EB0056D71F /* ViewControllerPresenter.swift in Sources */,
 				676FCEAC21EC8B270056D71F /* AppDelegate.swift in Sources */,
+				676FCEE321ECBC170056D71F /* UIApplication.swift in Sources */,
 				676FCED821ECB1630056D71F /* UserCellViewController.swift in Sources */,
 				676FCEBF21EC8F540056D71F /* UserJson.swift in Sources */,
 				676FCECC21EC91FB0056D71F /* String.swift in Sources */,

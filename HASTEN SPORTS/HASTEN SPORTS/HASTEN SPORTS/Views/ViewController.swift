@@ -9,9 +9,7 @@
 import UIKit
 
 protocol ViewControllerProtocol: BaseViewProtocol {
-    func showLoading()
-    func hideLoading()
-    func showUser(_ users: [UserJson])
+    func showUser(_ users: [SportJson])
 }
 
 
@@ -19,7 +17,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    private var usersJson: [UserJson] = []
+    private var usersJson: [SportJson] = []
     private var presenter: ViewControllerPresenter<ViewController>?
 
     override func viewDidLoad() {
@@ -40,12 +38,26 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return usersJson.count
+        if usersJson.count > 0 {
+            return usersJson[section].players.count
+        }else{
+            return 0
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if usersJson.count > 0 {
+            return usersJson[section].title
+        }else{
+            return ""
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserCellViewController", for: indexPath) as! UserCellViewController
-        cell.configure(with: usersJson[indexPath.row])
+        cell.configure(with: usersJson[indexPath.section].players[indexPath.row])
         
         return cell
     }
@@ -62,15 +74,7 @@ extension ViewController: UITableViewDelegate {
 
 extension ViewController: ViewControllerProtocol {
     
-    func showLoading() {
-        
-    }
-    
-    func hideLoading() {
-        
-    }
-    
-    func showUser(_ users: [UserJson]) {
+    func showUser(_ users: [SportJson]) {
         self.usersJson = users
         tableView.reloadData()
     }

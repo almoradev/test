@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 protocol Parseable {
     static func initWith(_ json: JSON) -> Self

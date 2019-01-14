@@ -7,5 +7,7 @@ target 'HASTEN SPORTS' do
 
 pod 'Moya'
 pod 'SwiftyJSON'
+pod 'SVProgressHUD'
+pod 'Kingfisher', '~> 4.0'
 
 end

@@ -36,19 +36,20 @@ struct NetworkService {
 
 extension NetworkService {
     
-    func fetchUsers(_ success: @escaping (_ users: [UserJson]) -> Void, failure:  @escaping ResponseError) {
-        provider.request(.checkUsers) { result in
+    func fetchUsers(_ success: @escaping (_ users: [SportJson]) -> Void, failure:  @escaping ResponseError) {
+        
+        provider.request(.checkUsers()) { result in
             switch result {
             case let .success(response):
                 do {
                     let json = try JSON(response.mapJSON())
-                    let users:[UserJson] = json.arrayValue.map { UserJson.initWith($0) }
+                    let users:[SportJson] = json.arrayValue.map { SportJson.initWith($0) }
                     success(users)
                 } catch {
-                    failure(ResponseError.wrongResponse)
+                    failure(hastenSportsError.wrongResponse)
                 }
             case .failure:
-                failure(ResponseError.wrongResponse)
+                failure(hastenSportsError.wrongResponse)
             }
         }
     }

@@ -7,11 +7,13 @@
 //
 
 import Foundation
+import SwiftyJSON
 
-final class UserJson: Object {
-    @objc dynamic var name: String = ""
-    @objc dynamic var image: String = ""
-    @objc dynamic var surname: String = ""
+final class UserJson {
+    
+    var name: String = ""
+    var image: String = ""
+    var surname: String = ""
     
 }
 
@@ -25,6 +27,6 @@ extension UserJson: Parseable {
         userJson.image = json["image"].stringValue
        
         
-        return speaker
+        return userJson
     }
 }

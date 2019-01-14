@@ -12,7 +12,7 @@ import Moya
 import SwiftyJSON
 
 public enum hastenSport {
-    case checkUsers(String)
+    case checkUsers()
    
 }
 
