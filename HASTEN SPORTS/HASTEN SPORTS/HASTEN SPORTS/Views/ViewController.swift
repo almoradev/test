@@ -37,6 +37,11 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        
+        return usersJson.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if usersJson.count > 0 {
             return usersJson[section].players.count

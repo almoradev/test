@@ -25,7 +25,9 @@ class UserCellViewController: UITableViewCell {
         surnameLabel.text = userJson.surname
         imageUser.kf.indicatorType = .activity
         let url = URL(string: userJson.image)!
-        imageUser.kf.setImage(with: url, options: [.transition(.fade(0.8))])
+        imageUser.kf.setImage(with: url,
+                              placeholder: UIImage(named: "default"),
+                              options: [.transition(.fade(0.8))])
     }
 
 }
